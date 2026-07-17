@@ -1,7 +1,27 @@
 #!/bin/bash
-# ~/.local/bin/install-bash.sh
+# ~/.dotfiles/scripts/installation/install-bash.sh
 
-mkdir -p ~/.local/bin
-ln -sf ~/dotfiles/scripts/bash/* ~/.local/bin/
-chmod +x ~/.local/bin/cpcpl ~/.local/bin/pscpl
-echo "Bash utilities installed to ~/.local/bin"
+# 1. Get the directory where this script is located
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+
+# 2. Derive the path to the bash scripts folder (go up two levels from installation/)
+DOTFILES_BASH="$(realpath "$SCRIPT_DIR/../bash")"
+LOCAL_BIN="$HOME/.local/bin"
+
+# 3. Ensure target directory exists
+mkdir -p "$LOCAL_BIN"
+
+# 4. Process
+for script in cpcpl pscpl; do
+    SOURCE="$DOTFILES_BASH/$script"
+    TARGET="$LOCAL_BIN/$script"
+
+    if [ -f "$SOURCE" ]; then
+        ln -sf "$SOURCE" "$TARGET"
+        chmod +x "$TARGET"
+        echo "Successfully linked and set executable: $script"
+    else
+        echo "Error: Source file $SOURCE not found!"
+        echo "Check if $DOTFILES_BASH exists."
+    fi
+done
