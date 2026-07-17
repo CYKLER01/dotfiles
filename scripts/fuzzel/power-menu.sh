@@ -6,6 +6,7 @@ MENU_ITEMS="Google Lens
 OCR Search
 QR Scan
 SSH Menu
+ToDo List
 ---
 Screenshot (Full)
 Screenshot (Region)
@@ -31,4 +32,5 @@ case "$CHOICE" in
     "Record (Full)") caelestia record ;;
     "Record (Region)") caelestia record -r ;;
     "Pick Color") hyprpicker -a ;;
+    "To-Do List") todo.sh ;;
 esac

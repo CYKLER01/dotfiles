@@ -22,6 +22,7 @@ Tools and shortcuts included in this repository:
  - `ocr-serach.sh` -> convert selected region into text
  - `qr-scan.sh` -> scan an on-screen qr code
  - `ssh-menu.sh` -> quickly start ssh sessions
+ - `todo-list.sh` -> brings up a todo list
  - `power-menu.sh` -> shows all power tools that can be used
 ### Bash Tools:
  - `cpcpl` -> copy the contntents of a file or the output of a command to clipboard
