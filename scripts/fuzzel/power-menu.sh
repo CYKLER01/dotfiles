@@ -8,12 +8,6 @@ QR Scan
 SSH Menu
 ToDo List
 ---
-Screenshot (Full)
-Screenshot (Region)
-Screenshot (Window)
-Record (Select)
-Record (Full)
-Record (Region)
 Pick Color"
 
 # Show fuzzel and get choice
@@ -25,12 +19,6 @@ case "$CHOICE" in
     "OCR Search") ocr-search.sh ;;
     "QR Scan") qr-scan.sh ;;
     "SSH Menu") ssh-menu.sh ;;
-    "Screenshot (Full)") caelestia screenshot ;;
-    "Screenshot (Region)") caelestia screenshotFreeze ;;
-    "Screenshot (Window)") caelestia screenshot ;;
-    "Record (Select)") caelestia record -s ;;
-    "Record (Full)") caelestia record ;;
-    "Record (Region)") caelestia record -r ;;
     "Pick Color") hyprpicker -a ;;
     "To-Do List") todo.sh ;;
 esac

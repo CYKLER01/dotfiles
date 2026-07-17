@@ -1,18 +1,22 @@
-#!/bin/bash
-# ~/.local/bin/install-fuzzel.sh
+#!/usr/bin/env bash
+set -euo pipefail
 
-# 1. Ensure the directory exists
-mkdir -p "$HOME/.local/bin"
+# Dynamically find the directory where this script lives
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-# 2. Link the files individually
-for file in "$HOME/dotfiles/scripts/fuzzel/"*.sh; do
+# Derive path to fuzzel folder (one level up from installation/)
+SOURCE_DIR="$(realpath "$SCRIPT_DIR/../fuzzel")"
+TARGET_DIR="$HOME/.local/bin"
+
+mkdir -p "$TARGET_DIR"
+
+for file in "$SOURCE_DIR"/*.sh; do
     if [ -f "$file" ]; then
-        ln -sf "$file" "$HOME/.local/bin/"
-        # Extract filename to chmod it
-        filename=$(basename "$file")
-        chmod +x "$HOME/.local/bin/$filename"
-        echo "Installed $filename"
+        target_file="$TARGET_DIR/$(basename "$file")"
+        ln -sf "$file" "$target_file"
+        chmod +x "$target_file"
+        echo "Successfully linked: $(basename "$file")"
+    else
+        echo "Warning: No scripts found in $SOURCE_DIR"
     fi
 done
-
-echo "Fuzzel menu scripts processing complete."

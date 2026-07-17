@@ -1,17 +1,15 @@
-#!/bin/bash
-# ~/.dotfiles/scripts/installation/install-bash.sh
+#!/usr/bin/env bash
+set -euo pipefail
 
-# 1. Get the directory where this script is located
+# Dynamically find the directory where this script lives
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-# 2. Derive the path to the bash scripts folder (go up two levels from installation/)
+# Derive path to bash folder (one level up from installation/)
 DOTFILES_BASH="$(realpath "$SCRIPT_DIR/../bash")"
 LOCAL_BIN="$HOME/.local/bin"
 
-# 3. Ensure target directory exists
 mkdir -p "$LOCAL_BIN"
 
-# 4. Process
 for script in cpcpl pscpl; do
     SOURCE="$DOTFILES_BASH/$script"
     TARGET="$LOCAL_BIN/$script"
@@ -19,7 +17,7 @@ for script in cpcpl pscpl; do
     if [ -f "$SOURCE" ]; then
         ln -sf "$SOURCE" "$TARGET"
         chmod +x "$TARGET"
-        echo "Successfully linked and set executable: $script"
+        echo "Successfully linked: $script"
     else
         echo "Error: Source file $SOURCE not found!"
         echo "Check if $DOTFILES_BASH exists."
