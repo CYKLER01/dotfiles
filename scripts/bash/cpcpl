@@ -1,0 +1,15 @@
+#!/bin/bash
+# ~/dotfiles/scripts/cpcpl
+
+# If an argument is provided, try to copy the file
+if [ -n "$1" ]; then
+    if [ -f "$1" ]; then
+        cat "$1" | wl-copy
+    else
+        # If it's not a file, assume it's a command/string to execute
+        $@ | wl-copy
+    fi
+else
+    # If no args, copy from stdin (e.g., echo "test" | cpcpl)
+    cat | wl-copy
+fi

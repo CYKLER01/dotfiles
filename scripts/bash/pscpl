@@ -1,0 +1,10 @@
+#!/bin/bash
+# ~/dotfiles/scripts/pscpl
+
+if [ -z "$1" ]; then
+    echo "Usage: pscpl <filename>"
+    exit 1
+fi
+
+wl-paste > "$1"
+notify-send "Clipboard" "Pasted contents into $1"
