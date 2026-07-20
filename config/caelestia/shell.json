@@ -1,0 +1,40 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": false,
+            "inverted": false,
+            "showOnHover": true
+        },
+        "clock": {
+            "background": true,
+            "showDate": false,
+            "showIcon": true
+        },
+        "status": {
+            "showAudio": true,
+            "showKbLayout": false,
+            "showMicrophone": false
+        },
+        "tray": {
+            "background": true,
+            "compact": true,
+            "recolour": false
+        },
+        "workspaces": {
+            "activeIndicator": true,
+            "activeTrail": false,
+            "occupiedBg": true,
+            "showWindows": true,
+            "showWindowsOnSpecialWorkspaces": true
+        }
+    },
+    "services": {
+        "audioIncrement": 0.05,
+        "useFahrenheit": false
+    }
+}
