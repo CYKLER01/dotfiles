@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo empty
+paru -S caelestia-cli
+caelestia install
