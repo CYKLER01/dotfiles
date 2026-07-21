@@ -3,6 +3,7 @@ return {
 	browser = "zen-browser",
 	editor = "code",
 	fileExplorer = "nautilus",
+	terminal = "foot --directory ~",
 
 	-- Touchpad
 	workspaceSwipeFingers = 3,
