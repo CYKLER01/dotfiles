@@ -35,6 +35,189 @@
     },
     "services": {
         "audioIncrement": 0.05,
+        "defaultPlayer": "Mozilla zen",
         "useFahrenheit": false
+    },
+    "utilities": {
+        "quickToggles": [
+            {
+                "enabled": true,
+                "id": "wifi"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "mic"
+            },
+            {
+                "enabled": true,
+                "id": "settings"
+            },
+            {
+                "enabled": true,
+                "id": "gameMode"
+            },
+            {
+                "enabled": true,
+                "id": "dnd"
+            },
+            {
+                "enabled": true,
+                "id": "vpn"
+            }
+        ],
+        "vpn": {
+            "enabled": false,
+            "provider": [
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Briant"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Briant"
+                    ],
+                    "displayName": "Briant",
+                    "id": "vpn-ms65xkv4-557tw",
+                    "interface": "tun0",
+                    "name": "Briant"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-Amsterdam-Tulip"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-Amsterdam-Tulip"
+                    ],
+                    "displayName": "Amsterdam - Tulip (ws)",
+                    "id": "vpn-ws-amsterdam",
+                    "interface": "tun0",
+                    "name": "Windscribe-Amsterdam-Tulip"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-Chicago-Green-Mill"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-Chicago-Green-Mill"
+                    ],
+                    "displayName": "Chicago - Green Mill (ws)",
+                    "id": "vpn-ws-chicago",
+                    "interface": "tun0",
+                    "name": "Windscribe-Chicago-Green-Mill"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-London-Biscuits"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-London-Biscuits"
+                    ],
+                    "displayName": "London - Biscuits (ws)",
+                    "id": "vpn-ws-london-biscuits",
+                    "interface": "tun0",
+                    "name": "Windscribe-London-Biscuits"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-London-Crumpets"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-London-Crumpets"
+                    ],
+                    "displayName": "London - Crumpets (ws)",
+                    "id": "vpn-ws-london-crumpets",
+                    "interface": "tun0",
+                    "name": "Windscribe-London-Crumpets"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-Miami-Florida-Man"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-Miami-Florida-Man"
+                    ],
+                    "displayName": "Miami - Florida Man (ws)",
+                    "id": "vpn-ws-miami",
+                    "interface": "tun0",
+                    "name": "Windscribe-Miami-Florida-Man"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-Sofia-Vitoshka"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-Sofia-Vitoshka"
+                    ],
+                    "displayName": "Sofia - Vitoshka (ws)",
+                    "id": "vpn-ws-sofia",
+                    "interface": "tun0",
+                    "name": "Windscribe-Sofia-Vitoshka"
+                },
+                {
+                    "connectCmd": [
+                        "nmcli",
+                        "connection",
+                        "up",
+                        "Windscribe-Vienna-Couch-of-Freud"
+                    ],
+                    "disconnectCmd": [
+                        "nmcli",
+                        "connection",
+                        "down",
+                        "Windscribe-Vienna-Couch-of-Freud"
+                    ],
+                    "displayName": "Vienna - Couch of Freud (ws)",
+                    "id": "vpn-ws-vienna",
+                    "interface": "tun0",
+                    "name": "Windscribe-Vienna-Couch-of-Freud"
+                }
+            ],
+            "selectedProvider": "vpn-ms65xkv4-557tw"
+        }
     }
 }
