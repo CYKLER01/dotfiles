@@ -11,6 +11,6 @@ sudo pacman -S --noconfirm \
   btop tree npm paru yay fuse2 obsidian \
   vim openssh nautilus heroic-games-launcher-bin \
   gnome-calendar gnome-keyring gnome-text-editor \
-  firefox foot ffmpeg kdenlive
+  firefox foot ffmpeg kdenlive pear-desktop
 
 paru -S visual-studio-code-bin --noconfirm
